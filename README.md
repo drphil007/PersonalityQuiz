@@ -19,6 +19,6 @@ Make account for Apple developer team on developer.apple.com
 
 Installing
 
-download file Light.xcodeproj
-open Light.xcodeproj in Xcode
+download file PersonalityQuiz.xcodeproj
+open PersonalityQuiz.xcodeproj in Xcode
 connect your iphone or ipad and click build and running
