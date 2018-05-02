@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Describes question response type.
 struct Question {
     var text: String
     var type: ResponseType
@@ -18,16 +19,16 @@ enum ResponseType {
     case single, multiple, ranged
 }
 
-/// display to the player and a type property that ties the answer to a specific result.
+/// Display to the player and a type property that ties the answer to a specific result.
 struct Answer {
     var text: String
     var type: AnimalType
 }
 
+// Definition property to present each animal type
 enum AnimalType: Character {
     case koala = "🐨", panda = "🐼", chick = "🐥", owl = "🦉"
 
-    // text about the outcome of the quiz.
     var definition: String {
         switch self {
         case .koala:
@@ -41,3 +42,4 @@ enum AnimalType: Character {
         }
     }
 }
+
