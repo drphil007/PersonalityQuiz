@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    /// Outlets for the stack views, controls and labels.
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var singleStackView: UIStackView!
@@ -18,6 +19,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var singleButton3: UIButton!
     @IBOutlet weak var singleButton4: UIButton!
     
+  
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet weak var multiLabel1: UILabel!
     @IBOutlet weak var multiLabel2: UILabel!
@@ -35,6 +37,7 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionProgressView: UIProgressView!
     
+    /// Array filled with a question of each response type
     var questions: [Question] = [
         Question(text: "Which food do you like the most?",
                  type: .single,
@@ -65,13 +68,17 @@ class QuestionViewController: UIViewController {
     ]
     
     var questionIndex = 0
+    
+    // Initialize an empty collection to store player's answers.
     var answersChosen: [Answer] = []
     
+    /// Sets the proper interface for the first question
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
 
+    /// Adds single-answers to collection and specifies which button triggered the method.
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         
@@ -91,6 +98,7 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    /// Adds mulitple-anwers to collection, appends as many as four answers per question.
     @IBAction func multipleAnswerButtonPressed() {
         let currentAnswers = questions[questionIndex].answers
         
@@ -110,6 +118,7 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    // Adds silder's value to collection. Slider's value is converted to array index.
     @IBAction func rangedAnswerButtonPressed() {
         let currentAnswers = questions[questionIndex].answers
         let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
@@ -119,6 +128,8 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    /// Func called to display each question to player.
+    /// Updates interface, such as the title and visibility of the stack views.
     func updateUI() {
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
@@ -142,6 +153,8 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    /// Method to update label's text of single-answer stack view.
+    /// First button corresponds to first answer string, and so on.
     func updateSingleStack(using answers: [Answer]) {
         singleStackView.isHidden = false
         singleButton1.setTitle(answers[0].text, for: .normal)
@@ -150,6 +163,7 @@ class QuestionViewController: UIViewController {
         singleButton4.setTitle(answers[3].text, for: .normal)
     }
     
+    /// Method to update multiple-answer stack view. Resets positions of their controls.
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
         multiSwitch1.isOn = false
@@ -162,6 +176,7 @@ class QuestionViewController: UIViewController {
         multiLabel4.text = answers[3].text
     }
     
+    /// Method to update ranged-answer stack view. Resets positions of their controls.
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
         rangedSlider.setValue(0.5, animated: false)
@@ -169,6 +184,7 @@ class QuestionViewController: UIViewController {
         rangedLabel2.text = answers.last?.text
     }
     
+    /// Displays next question and determines if there are any remaining questions.
     func nextQuestion() {
         questionIndex += 1
         
@@ -179,6 +195,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    // Pass data to the results view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ResultsSegue" {
             let resultsViewController = segue.destination as! ResultsViewController

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		157AEA7C2095A5B1008619B5 /* QuestionData.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEA7B2095A5B1008619B5 /* QuestionData.Swift */; };
+		157AEA7C2095A5B1008619B5 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEA7B2095A5B1008619B5 /* QuestionData.swift */; };
 		15BDBF572090941200278711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBF562090941200278711 /* AppDelegate.swift */; };
 		15BDBF592090941200278711 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BDBF582090941200278711 /* IntroductionViewController.swift */; };
 		15BDBF5C2090941200278711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BDBF5A2090941200278711 /* Main.storyboard */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		157AEA7B2095A5B1008619B5 /* QuestionData.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.Swift; sourceTree = "<group>"; };
+		157AEA7B2095A5B1008619B5 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		15BDBF532090941200278711 /* PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BDBF562090941200278711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BDBF582090941200278711 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				15BDBF562090941200278711 /* AppDelegate.swift */,
 				15BDBF582090941200278711 /* IntroductionViewController.swift */,
 				15BDBF5A2090941200278711 /* Main.storyboard */,
-				157AEA7B2095A5B1008619B5 /* QuestionData.Swift */,
+				157AEA7B2095A5B1008619B5 /* QuestionData.swift */,
 				15BDBF842090ACA500278711 /* QuestionViewController.swift */,
 				15BDBF862090AD3700278711 /* ResultsViewController.swift */,
 				15BDBF5D2090941200278711 /* Assets.xcassets */,
@@ -270,7 +270,7 @@
 			files = (
 				15BDBF592090941200278711 /* IntroductionViewController.swift in Sources */,
 				15BDBF572090941200278711 /* AppDelegate.swift in Sources */,
-				157AEA7C2095A5B1008619B5 /* QuestionData.Swift in Sources */,
+				157AEA7C2095A5B1008619B5 /* QuestionData.swift in Sources */,
 				15BDBF852090ACA500278711 /* QuestionViewController.swift in Sources */,
 				15BDBF872090AD3700278711 /* ResultsViewController.swift in Sources */,
 			);

@@ -10,11 +10,13 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    // Outlets that update the label's text.
     @IBOutlet weak var resultAnswerLabel: UILabel!
     @IBOutlet weak var resultDefinitionLabel: UILabel!
     
     var responses: [Answer]!
 
+    /// Holds frequency of each response.
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -26,6 +28,7 @@ class ResultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /// Calculates final outcome of quiz.
     func calculatePersonalityResult() {
         var frequencyOfAnswers: [AnimalType:Int] = [:]
         let responseTypes = responses.map { $0.type }

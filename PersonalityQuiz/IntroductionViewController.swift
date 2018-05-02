@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroductionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /// Unwind segue dismisses the view controllers and unwinds to the first view controller.
     @IBAction func unwindToQuizIntroduction(segue: UIStoryboardSegue) {
         
     }
